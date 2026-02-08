@@ -1,3 +1,9 @@
+body {
+  background-color: #d8b28a;
+  background-image: radial-gradient(#c19a6b 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
 h1 {
     color: white;
     font-style: italic;
@@ -30,12 +36,6 @@ h1 {
 
 .row.right {
   flex-direction: row-reverse;
-}
-
-body {
-  background-color: #d8b28a;
-  background-image: radial-gradient(#c19a6b 1px, transparent 1px);
-  background-size: 6px 6px;
 }
 
 
