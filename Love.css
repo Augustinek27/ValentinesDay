@@ -1,0 +1,112 @@
+h1 {
+    color: white;
+    font-style: italic;
+    font-family: cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+.heartfeltMessage {
+    color: white;
+    font-family: "sofia";
+    font-size: 30px;
+    text-align: center;
+}
+
+.text {
+  color: white;
+  font-family: "Sofia";
+  font-size: 42px;
+  max-width: 400px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 80px 0;
+}
+
+.row.right {
+  flex-direction: row-reverse;
+}
+
+body {
+  background-color: #d8b28a;
+  background-image: radial-gradient(#c19a6b 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+
+.polaroid {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  padding-bottom: 20px; /* thicker bottom like real polaroid */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Red push pin */
+.polaroid::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 30% 30%, #ff8080, #b30000);
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Tilt variation */
+.polaroid:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* Image centered with even frame */
+.polaroid img {
+  width: 100%;
+  display: block;
+  border: 6px solid white; /* ensures equal left/right frame */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Caption */
+.container {
+  text-align: center;
+  padding-top: 8px;
+
+}
+
+.gallery-title {
+  text-align: center;
+  color: white;
+  font-family: "Sofia";
+  font-size: 42px;
+  margin-top: 100px;
+}
+
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  justify-items: center;
+}
+
+.polaroid-grid .polaroid {
+  width: 200px;
+  padding: 12px;
+}
